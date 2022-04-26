@@ -10,6 +10,7 @@
     <modules>
         <module>demo_mybatisPlus</module>
         <module>demo_jpa</module>
+        <module>demo_jdbcTemplate</module>
     </modules>
 
     <name>demo_springboot</name>
