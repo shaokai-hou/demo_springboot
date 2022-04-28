@@ -1,0 +1,12 @@
+server:
+  port: 9981
+spring:
+  # 全局日期时间格式化
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/demo_springboot?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver

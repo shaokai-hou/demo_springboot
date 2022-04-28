@@ -3,6 +3,7 @@ package com.haohao.mybatis.plus.config;
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.reflection.MetaObject;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
+@Primary
 public class CommonFieldHandler implements MetaObjectHandler {
 
     @Override
