@@ -15,6 +15,7 @@
         <module>demo_redis</module>
         <module>demo_aopLog</module>
         <module>demo_common</module>
+        <module>demo_mongodb</module>
     </modules>
 
     <name>demo_springboot</name>
