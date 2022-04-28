@@ -16,6 +16,7 @@
         <module>demo_aopLog</module>
         <module>demo_common</module>
         <module>demo_mongodb</module>
+        <module>demo_email</module>
     </modules>
 
     <name>demo_springboot</name>
