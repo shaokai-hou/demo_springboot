@@ -1,7 +1,7 @@
 package com.haohao.mybatis.plus.config;
 
-import com.haohao.mybatis.plus.domain.result.ResultCodeEnum;
-import com.haohao.mybatis.plus.domain.result.ResultData;
+import com.demo.common.result.ResultCodeEnum;
+import com.demo.common.result.ResultData;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

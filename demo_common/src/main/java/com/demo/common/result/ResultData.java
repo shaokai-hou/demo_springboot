@@ -1,4 +1,4 @@
-package com.haohao.mybatis.plus.domain.result;
+package com.demo.common.result;
 
 import lombok.Data;
 

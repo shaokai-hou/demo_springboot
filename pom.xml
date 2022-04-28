@@ -14,6 +14,7 @@
         <module>demo_springCache</module>
         <module>demo_redis</module>
         <module>demo_aopLog</module>
+        <module>demo_common</module>
     </modules>
 
     <name>demo_springboot</name>
@@ -29,6 +30,7 @@
         <commons.io.version>2.11.0</commons.io.version>
         <hutools-version>5.7.5</hutools-version>
         <guava.version>29.0-jre</guava.version>
+        <demo.common.version>1.0.0</demo.common.version>
     </properties>
 
     <dependencyManagement>
@@ -58,6 +60,12 @@
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${commons.io.version}</version>
+            </dependency>
+            <!--demo-common-->
+            <dependency>
+                <groupId>com.haohao.demo.springboot</groupId>
+                <artifactId>demo_common</artifactId>
+                <version>${demo.common.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

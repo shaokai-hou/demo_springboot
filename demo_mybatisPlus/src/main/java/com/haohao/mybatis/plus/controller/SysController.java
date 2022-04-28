@@ -1,9 +1,8 @@
 package com.haohao.mybatis.plus.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
+import com.demo.common.result.ResultData;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.haohao.mybatis.plus.domain.SysUserEntity;
-import com.haohao.mybatis.plus.domain.result.ResultData;
 import com.haohao.mybatis.plus.service.ISysUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
