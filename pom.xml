@@ -13,6 +13,7 @@
         <module>demo_jdbcTemplate</module>
         <module>demo_springCache</module>
         <module>demo_redis</module>
+        <module>demo_aopLog</module>
     </modules>
 
     <name>demo_springboot</name>

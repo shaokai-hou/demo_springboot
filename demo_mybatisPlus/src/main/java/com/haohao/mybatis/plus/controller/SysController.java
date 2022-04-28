@@ -3,6 +3,7 @@ package com.haohao.mybatis.plus.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.haohao.mybatis.plus.domain.SysUserEntity;
+import com.haohao.mybatis.plus.domain.result.ResultData;
 import com.haohao.mybatis.plus.service.ISysUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,21 +29,28 @@ public class SysController {
     final ObjectMapper json;
 
     @GetMapping("/list")
-    public String list() throws JsonProcessingException {
+    public ResultData list() {
         List<SysUserEntity> list = sysUserService.list();
-        return json.writeValueAsString(list);
+        return ResultData.success().data(list);
     }
 
     @GetMapping("/date")
-    public String dateFormat() throws JsonProcessingException {
+    public ResultData dateFormat() {
         Date date = new Date();
         LocalDate localDate = LocalDate.now();
         LocalDateTime localDateTime = LocalDateTime.now();
 
-        Map<String, Object> result = new HashMap<>(2);
+        Map<String, Object> result = new HashMap<>(3);
         result.put("date", date);
         result.put("localDate", localDate);
         result.put("localDateTime", localDateTime);
-        return json.writeValueAsString(result);
+        return ResultData.success().data(result);
+    }
+
+    @GetMapping("/test")
+    public ResultData test() {
+        ResultData data = null;
+        data.setData(null);
+        return ResultData.error();
     }
 }

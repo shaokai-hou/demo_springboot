@@ -1,5 +1,5 @@
 server:
-  port: 9990
+  port: 9980
 spring:
   # 全局日期时间格式化
   jackson:
