@@ -1,5 +1,6 @@
 package com.haohao.mybatis.plus.domain;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
@@ -47,4 +48,10 @@ public class SysUserEntity extends BaseEntity implements Serializable {
      * 状态，0：禁用，1：启用
      */
     private Integer status;
+
+    /**
+     * 状态，0：禁用，1：启用
+     */
+    @TableField(exist = false)
+    private String stateStr;
 }

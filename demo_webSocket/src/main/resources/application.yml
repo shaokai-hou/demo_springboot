@@ -1,0 +1,7 @@
+server:
+  port: 9988
+spring:
+  # 全局日期时间格式化
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai

@@ -17,6 +17,7 @@
         <module>demo_common</module>
         <module>demo_mongodb</module>
         <module>demo_email</module>
+        <module>demo_webSocket</module>
     </modules>
 
     <name>demo_springboot</name>
