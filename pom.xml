@@ -19,6 +19,7 @@
         <module>demo_email</module>
         <module>demo_webSocket</module>
         <module>demo_minio</module>
+        <module>demo_thymeleaf</module>
     </modules>
 
     <name>demo_springboot</name>
