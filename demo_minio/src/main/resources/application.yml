@@ -6,3 +6,12 @@ minio:
   user: admin
   password: admin123
   bucketName: test
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  groovy:
+    template:
+      cache: false
