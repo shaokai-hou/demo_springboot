@@ -1,0 +1,8 @@
+server:
+  port: 9988
+
+minio:
+  url: http://127.0.0.1:9000
+  user: admin
+  password: admin123
+  bucketName: test
