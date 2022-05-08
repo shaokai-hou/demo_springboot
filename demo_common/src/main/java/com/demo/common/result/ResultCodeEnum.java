@@ -26,7 +26,6 @@ public enum ResultCodeEnum {
      * NULL_POINT
      */
     NULL_POINT(203, "空指针异常");
-
     /**
      * 响应状态码
      */
