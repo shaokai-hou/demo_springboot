@@ -1,6 +1,7 @@
 package com.haohao.mybatis.plus.domain;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
@@ -23,6 +24,7 @@ public class SysUserEntity extends BaseEntity implements Serializable {
     /**
      * 主键
      */
+    @TableId
     private Integer id;
     /**
      * 用户名
