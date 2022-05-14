@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:db2://192.168.0.145:50000/SAMPLE
+    username: zs
+    password: 1234
+    driver-class-name: com.ibm.db2.jcc.DB2Driver

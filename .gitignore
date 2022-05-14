@@ -97,3 +97,4 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 .idea
+/demo_rabbitmq/demo_rabbitmq.iml

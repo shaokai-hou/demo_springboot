@@ -20,6 +20,9 @@
         <module>demo_webSocket</module>
         <module>demo_minio</module>
         <module>demo_thymeleaf</module>
+        <module>demo_db2</module>
+        <module>demo_elasticsearch</module>
+        <module>demo_rabbitmq</module>
     </modules>
 
     <name>demo_springboot</name>
@@ -33,7 +36,7 @@
         <java.version>1.8</java.version>
         <spring-boot.version>2.5.3</spring-boot.version>
         <commons.io.version>2.11.0</commons.io.version>
-        <hutools-version>5.7.5</hutools-version>
+        <hutools-version>5.8.0</hutools-version>
         <guava.version>29.0-jre</guava.version>
         <demo.common.version>1.0.0</demo.common.version>
     </properties>

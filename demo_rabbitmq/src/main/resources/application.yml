@@ -1,0 +1,13 @@
+spring:
+  rabbitmq:
+    addresses: localhost
+    port: 15672
+    username: guest
+    password: guest
+    virtual-host: /
+    # 手动确认消息
+    listener:
+      simple:
+        acknowledge-mode: manual
+server:
+  port: 8989
