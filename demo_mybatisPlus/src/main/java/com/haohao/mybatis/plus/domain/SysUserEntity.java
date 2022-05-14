@@ -6,7 +6,6 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 系统用户

@@ -9,7 +9,6 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * @author haohao
