@@ -41,6 +41,10 @@ public class ResultData {
         return result;
     }
 
+    public static ResultData flag(Boolean flag) {
+        return flag ? ResultData.success() : ResultData.error();
+    }
+
     /**
      * ------------使用链式编程，返回类本身-----------
      **/

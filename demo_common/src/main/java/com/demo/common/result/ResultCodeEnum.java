@@ -25,7 +25,20 @@ public enum ResultCodeEnum {
     /**
      * NULL_POINT
      */
-    NULL_POINT(203, "空指针异常");
+    NULL_POINT(203, "空指针异常"),
+    /**
+     * 用户不存在
+     */
+    USER_NOT_FOUND(203, "空指针异常"),
+    /**
+     * 未授权
+     */
+    UNAUTHORIZED(401, "未授权"),
+    /**
+     * 没有访问权限
+     */
+    FORBIDDEN(403, "没有访问权限");
+
     /**
      * 响应状态码
      */
