@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.haohao.security.mapper.SecPermissionMapper">
+
+    <resultMap id="BaseResultMap" type="com.haohao.security.domain.SecPermission">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="url" column="url" jdbcType="VARCHAR"/>
+        <result property="type" column="type" jdbcType="INTEGER"/>
+        <result property="permission" column="permission" jdbcType="VARCHAR"/>
+        <result property="method" column="method" jdbcType="VARCHAR"/>
+        <result property="sort" column="sort" jdbcType="INTEGER"/>
+        <result property="parentId" column="parent_id" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,name,url,
+        type,permission,method,
+        sort,parent_id
+    </sql>
+    <select id="selectPermissionListByRoleIds" resultType="com.haohao.security.domain.SecPermission">
+        SELECT m.id,
+        m.name,
+        m.description,
+        sp.id,
+        sp.name,
+        sp.url,
+        sp.type,
+        sp.method,
+        sp.permission,
+        sp.parent_id
+        FROM sec_role m
+        LEFT JOIN sec_role_permission srp ON m.id = srp.role_id
+        LEFT JOIN sec_permission sp ON sp.id = srp.permission_id
+        WHERE m.id IN
+        <foreach collection="roleId" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+
+    </select>
+</mapper>

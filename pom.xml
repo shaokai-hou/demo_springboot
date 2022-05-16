@@ -23,6 +23,8 @@
         <module>demo_db2</module>
         <module>demo_elasticsearch</module>
         <module>demo_rabbitmq</module>
+        <module>demo_security</module>
+        <module>demo_poi</module>
     </modules>
 
     <name>demo_springboot</name>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.haohao.security.mapper.SecRoleMapper">
+
+    <resultMap id="BaseResultMap" type="com.haohao.security.domain.SecRole">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="BIGINT"/>
+        <result property="updateTime" column="update_time" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,name,description,create_time,update_time
+    </sql>
+
+    <select id="selectRoleListByUserId" resultType="com.haohao.security.domain.SecRole">
+        SELECT m.id,
+               m.name,
+               m.description,
+               su.id,
+               su.username,
+               su.password
+        FROM sec_role m
+                 LEFT JOIN sec_user_role sur ON m.id = sur.role_id
+                 LEFT JOIN sec_user su ON su.id = sur.user_id
+        where su.id = #{userId}
+    </select>
+</mapper>
