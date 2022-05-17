@@ -28,7 +28,7 @@ public class SecUserController {
     @PostMapping
     @PreAuthorize("@ss.hasPermission('system:user:save')")
     public ResultData save(@Validated @RequestBody SecUser secUser) {
-        return ResultData.flag(secUserService.save(secUser));
+        return ResultData.flag(secUserService.saveUser(secUser));
     }
 
     @PutMapping

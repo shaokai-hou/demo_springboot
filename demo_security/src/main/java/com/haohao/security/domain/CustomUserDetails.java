@@ -51,7 +51,7 @@ public class CustomUserDetails implements UserDetails {
     /**
      * 用户角色列表
      */
-    private List<String> roles;
+    private Set<String> roles;
 
     /**
      * 用户权限列表
@@ -97,7 +97,7 @@ public class CustomUserDetails implements UserDetails {
     @Override
     @JsonIgnore
     public boolean isEnabled() {
-        return Objects.equals(this.status, StatusConstant.DISABLE);
+        return Objects.equals(this.status, StatusConstant.ENABLE);
     }
 
     /**
@@ -109,7 +109,7 @@ public class CustomUserDetails implements UserDetails {
      * @return CustomUserDetails 自定义UserDetails
      */
     public static CustomUserDetails build(SecUser user, List<SecRole> roles, List<SecPermission> permissions) {
-        List<String> roleNames = roles.stream().map(SecRole::getName).collect(Collectors.toList());
+        Set<String> roleNames = roles.stream().map(SecRole::getName).collect(Collectors.toSet());
         Set<String> permissionList = permissions.stream()
                 .map(SecPermission::getPermission)
                 .collect(Collectors.toSet());

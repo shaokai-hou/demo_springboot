@@ -19,31 +19,19 @@ public class SecPermission implements Serializable {
     @TableId
     private Long id;
     /**
-     * 权限名
+     * 父级id
      */
-    private String name;
-    /**
-     * 类型为页面时，代表前端路由地址，类型为按钮时，代表后端接口地址
-     */
-    private String url;
-    /**
-     * 权限类型，页面-1，按钮-2
-     */
-    private Integer type;
+    private Long parentId;
     /**
      * 权限表达式
      */
     private String permission;
     /**
-     * 后端接口访问方式
+     * 权限描述
      */
-    private String method;
+    private String description;
     /**
      * 排序
      */
     private Integer sort;
-    /**
-     * 父级id
-     */
-    private Long parentId;
 }

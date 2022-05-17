@@ -64,4 +64,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // 添加JWT filter
         httpSecurity.addFilterBefore(authenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
     }
+
+    public static void main(String[] args) {
+        System.out.println(new BCryptPasswordEncoder().encode("123456"));
+        System.out.println(new BCryptPasswordEncoder().matches("admin123", "$2a$10$OdaLmSr5exv91f5wDDvw0epq2tyLM05HmtT.JQ9mXzZ9tF5TzCNBW"));
+    }
 }

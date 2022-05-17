@@ -5,23 +5,18 @@
 <mapper namespace="com.haohao.security.mapper.SecUserMapper">
 
     <resultMap id="BaseResultMap" type="com.haohao.security.domain.SecUser">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="username" column="username" jdbcType="VARCHAR"/>
-            <result property="password" column="password" jdbcType="VARCHAR"/>
-            <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
-            <result property="phone" column="phone" jdbcType="VARCHAR"/>
-            <result property="email" column="email" jdbcType="VARCHAR"/>
-            <result property="birthday" column="birthday" jdbcType="BIGINT"/>
-            <result property="sex" column="sex" jdbcType="INTEGER"/>
-            <result property="status" column="status" jdbcType="INTEGER"/>
-            <result property="createTime" column="create_time" jdbcType="BIGINT"/>
-            <result property="updateTime" column="update_time" jdbcType="BIGINT"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="username" column="username" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
+        <result property="phone" column="phone" jdbcType="VARCHAR"/>
+        <result property="email" column="email" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        id,username,password,
-        nickname,phone,email,
-        birthday,sex,status,
-        create_time,update_time
+        id
+        ,username,password,
+        nickname,phone,email,status,
     </sql>
 </mapper>

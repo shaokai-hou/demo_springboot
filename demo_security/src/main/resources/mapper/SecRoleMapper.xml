@@ -19,14 +19,14 @@
 
     <select id="selectRoleListByUserId" resultType="com.haohao.security.domain.SecRole">
         SELECT m.id,
-               m.name,
-               m.description,
-               su.id,
-               su.username,
-               su.password
-        FROM sec_role m
-                 LEFT JOIN sec_user_role sur ON m.id = sur.role_id
-                 LEFT JOIN sec_user su ON su.id = sur.user_id
-        where su.id = #{userId}
+               m.username,
+               m.password,
+               sr.id,
+               sr.name,
+               sr.description
+        FROM sec_user m
+                 LEFT JOIN sec_user_role sur ON m.id = sur.user_id
+                 LEFT JOIN sec_role sr ON sr.id = sur.role_id
+        where m.id = #{userId}
     </select>
 </mapper>

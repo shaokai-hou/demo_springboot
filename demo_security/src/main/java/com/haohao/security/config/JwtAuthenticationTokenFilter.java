@@ -26,6 +26,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -47,10 +48,11 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
         String token = request.getHeader(jwtConfig.getHeader());
         if (StrUtil.isNotBlank(token)) {
-            Long loginUserId = jwtUtils.getLoginUser(request);
+            Long loginUserId = jwtUtils.getLoginUserId(request);
             // 缓存中获取对象
             String s = stringRedisTemplate.opsForValue().get(loginUserId.toString());
             CustomUserDetails loginUser = new ObjectMapper().readValue(s, CustomUserDetails.class);
+
             UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(loginUser, null, loginUser.getAuthorities());
             authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);

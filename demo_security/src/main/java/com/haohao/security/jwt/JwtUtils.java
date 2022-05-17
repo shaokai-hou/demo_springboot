@@ -36,7 +36,7 @@ public class JwtUtils {
      * @param request request
      * @return 当前登录用户
      */
-    public Long getLoginUser(HttpServletRequest request) {
+    public Long getLoginUserId(HttpServletRequest request) {
         // 获取请求携带的令牌
         String token = getToken(request);
         Claims claims = parseToken(token);

@@ -4,10 +4,18 @@ import com.haohao.security.domain.SecUser;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
-* @author haohao
-* @description 针对表【sec_user(用户表)】的数据库操作Service
-* @createDate 2022-05-16 15:07:15
-*/
+ * @author haohao
+ * @description 针对表【sec_user(用户表)】的数据库操作Service
+ * @createDate 2022-05-16 15:07:15
+ */
 public interface SecUserService extends IService<SecUser> {
+
+    /**
+     * 保存用户
+     *
+     * @param secUser 用户
+     * @return 保存结果
+     */
+    Boolean saveUser(SecUser secUser);
 
 }

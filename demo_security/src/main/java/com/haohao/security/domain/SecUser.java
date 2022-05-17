@@ -1,5 +1,6 @@
 package com.haohao.security.domain;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 用户表
@@ -50,23 +52,11 @@ public class SecUser implements Serializable {
      */
     private String email;
     /**
-     * 生日
-     */
-    private Long birthday;
-    /**
-     * 性别，男-1，女-2
-     */
-    private Integer sex;
-    /**
-     * 状态，启用-1，禁用-0
+     * 状态，启用0，禁用1
      */
     private Integer status;
-    /**
-     * 创建时间
-     */
-    private Long createTime;
-    /**
-     * 更新时间
-     */
-    private Long updateTime;
+
+    @TableField(exist = false)
+    @NotNull(message = "角色不能为空")
+    private List<SecRole> secRoles;
 }

@@ -19,14 +19,20 @@ public class TestController {
     }
 
     @GetMapping("/2")
-    @PreAuthorize("@ss.hasPermission('page:test')")
+    @PreAuthorize("@ss.hasAnyPermission('page:test')")
     public String test2() {
         return "test2";
     }
 
     @GetMapping("/3")
-    @PreAuthorize("@ss.hasPermission('page:test')")
+    @PreAuthorize("@ss.hasRole('test')")
     public String test3() {
         return "test3";
+    }
+
+    @GetMapping("/4")
+    @PreAuthorize("@ss.hasAnyRole('test')")
+    public String test4() {
+        return "test4";
     }
 }

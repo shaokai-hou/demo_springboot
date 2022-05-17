@@ -32,6 +32,16 @@ public class GlobalExceptionHandler {
     }
 
     /**
+     * 基础异常处理
+     */
+    @ExceptionHandler(BaseException.class)
+    @ResponseBody
+    public ResultData error(BaseException e) {
+        log.error("基础异常信息", e);
+        return ResultData.error().code(e.getCode()).message(e.getMessage());
+    }
+
+    /**
      * 空指针异常处理
      **/
     @ExceptionHandler(NullPointerException.class)
