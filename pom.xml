@@ -25,6 +25,7 @@
         <module>demo_rabbitmq</module>
         <module>demo_security</module>
         <module>demo_poi</module>
+        <module>demo_shiro</module>
     </modules>
 
     <name>demo_springboot</name>
