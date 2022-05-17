@@ -13,3 +13,4 @@
 * [demo-poi](https://github.com/shaokai-hou/demo_springboot/tree/main/demo_poi)
 * [demo-webSocket](https://github.com/shaokai-hou/demo_springboot/tree/main/demo_webSocket)
 * [demo-thymeleaf](https://github.com/shaokai-hou/demo_springboot/tree/main/demo_thymeleaf)
+* [demo-thymeleaf](https://github.com/shaokai-hou/demo_springboot/tree/main/demo_thymeleaf)
