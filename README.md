@@ -1,4 +1,4 @@
-# demo_springboot（test）
+# demo_springboot（main）
 
 * [demo-mybatisPlus](https://github.com/shaokai-hou/demo_springboot/tree/main/demo_mybatisPlus)
 * [demo-jdbcTemplate](https://github.com/shaokai-hou/demo_springboot/tree/main/demo_jdbcTemplate)
