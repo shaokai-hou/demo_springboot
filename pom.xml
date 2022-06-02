@@ -26,6 +26,8 @@
         <module>demo_security</module>
         <module>demo_poi</module>
         <module>demo_shiro</module>
+        <module>demo_flowable</module>
+        <module>demo_webFlux</module>
     </modules>
 
     <name>demo_springboot</name>

@@ -1,0 +1,19 @@
+server:
+  port: 1234
+  servlet:
+    context-path: /
+
+spring:
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/test
+    username: root
+    password: root
+    pool:
+      enabled: true
+      max-size: 10
+      initial-size: 10
+      validation-query: select 1
+
+logging:
+  level:
+    org.springframework.r2dbc: DEBUG  #输出执行的sql
