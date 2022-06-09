@@ -28,6 +28,8 @@
         <module>demo_shiro</module>
         <module>demo_flowable</module>
         <module>demo_webFlux</module>
+        <module>demo_activiti</module>
+        <module>demo_satoken</module>
     </modules>
 
     <name>demo_springboot</name>

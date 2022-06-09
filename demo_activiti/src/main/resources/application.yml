@@ -1,0 +1,17 @@
+server:
+  port: 1024
+  servlet:
+    context-path: /
+
+spring:
+  activiti:
+    # flase：activiti在启动时，会对比数据库表中保存的版本，如果没有表或者版本不匹配，将抛出异常。（生产环境常用）
+    # true： activiti会对数据库中所有表进行更新操作。如果表不存在，则自动创建。（开发时常用）
+    database-schema-update: true
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo_activiti?useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=UTC&nullCatalogMeansCurrent=true
+    username: root
+    password: root
+
