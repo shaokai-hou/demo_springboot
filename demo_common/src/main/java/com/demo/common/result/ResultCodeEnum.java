@@ -29,11 +29,15 @@ public enum ResultCodeEnum {
     /**
      * 用户不存在
      */
-    USER_NOT_FOUND(203, "空指针异常"),
+    USER_NOT_FOUND(203, "用户不存在"),
     /**
      * 未授权
      */
     UNAUTHORIZED(401, "未授权"),
+    /**
+     * 未登录
+     */
+    NOT_LOGIN(401, "未登录"),
     /**
      * 没有访问权限
      */

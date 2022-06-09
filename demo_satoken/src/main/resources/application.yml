@@ -1,0 +1,21 @@
+server:
+  port: 1024
+
+sa-token:
+  token-name: token
+  is-log: true
+  is-print: false
+  token-style: simple-uuid
+
+spring:
+  redis:
+    database: 1
+    host: 127.0.0.1
+    port: 6379
+    timeout: 10s
+    lettuce:
+      pool:
+        max-active: 200
+        max-wait: -1ms
+        max-idle: 10
+        min-idle: 0

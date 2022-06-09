@@ -10,6 +10,4 @@ import com.haohao.minio.domain.SysFile;
  * @Entity com.haohao.minio.domain.SysFile
  */
 public interface SysFileMapper extends BaseMapper<SysFile> {
-
-
 }
