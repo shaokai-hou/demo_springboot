@@ -30,6 +30,7 @@
         <module>demo_webFlux</module>
         <module>demo_activiti</module>
         <module>demo_satoken</module>
+        <module>demo_elasticsearc_db</module>
     </modules>
 
     <name>demo_springboot</name>

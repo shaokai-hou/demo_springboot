@@ -29,7 +29,4 @@ public class Goods implements Serializable {
     private Double price;
     @Field(type = FieldType.Text, analyzer = "ik_max_word")
     private String name;
-
-    public Goods(List<Map<String, Object>> mapList) {
-    }
 }

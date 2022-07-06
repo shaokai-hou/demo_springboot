@@ -27,8 +27,8 @@ public class SysUserService {
     }
 
     public Flux<SysUser> getList(SysUser sysUser) {
-        CriteriaDefinition criteria = Criteria.where("id").is(1L)
-                .and(Criteria.where("name").is("张三"));
+        CriteriaDefinition criteria = Criteria.where("id").is(sysUser.getId())
+                .and(Criteria.where("name").is(sysUser.getName()));
         Query query = Query.query(criteria);
         return r2dbcEntityTemplate.select(query, SysUser.class);
     }

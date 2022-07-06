@@ -32,6 +32,6 @@ public class AuthController {
     }
 
     public void logout(){
-
+        StpUtil.logout();
     }
 }
