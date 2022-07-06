@@ -30,4 +30,8 @@ public class AuthController {
             log.info("login token :{}", tokenInfo);
         }
     }
+
+    public void logout(){
+        StpUtil.logout();
+    }
 }
